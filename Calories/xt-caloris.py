@@ -11,7 +11,6 @@ from base64 import b64encode
 from io import BytesIO
 import requests
 import cv2
-import sqlite3
 from xt_calorisattached import * 
 import json
 
