@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+import pyecharts
 from pyecharts import options as opts
 from pyecharts.charts import Map
 from pyecharts.datasets import register_url
