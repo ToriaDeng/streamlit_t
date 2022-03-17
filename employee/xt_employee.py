@@ -1,11 +1,8 @@
-from unicodedata import name
 import streamlit as st
 import pandas as pd 
 from xt_todolist_attached import * 
-import streamlit.components.v1 as stc
 import streamlit as st
 import smtplib as s 
-
 
 
 
@@ -95,7 +92,6 @@ elif choice == "Delete Info" :
 		st.subheader("Delete")
 		with st.expander("View Data"):
 			result = view_all_data()
-			# st.write(result)
 			clean_df = pd.DataFrame(result,columns=['Employee_Name','Position','Email_Address','Entry_date'])
 			st.dataframe(clean_df)
 
@@ -107,7 +103,6 @@ elif choice == "Delete Info" :
 
 		with st.expander("Updated Data"):
 			result = view_all_data()
-			# st.write(result)
 			clean_df = pd.DataFrame(result,columns=['Employee_Name','Position','Email_Address','Entry_date'])
 			st.dataframe(clean_df)
 
