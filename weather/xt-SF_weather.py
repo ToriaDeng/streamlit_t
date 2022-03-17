@@ -1,16 +1,13 @@
-﻿from optparse import Values
-from time import time
+
 from nbformat import write
 import streamlit as st
 import pandas as pd
 import base64
 import matplotlib.pyplot as plt
-import numpy as np
 import requests
 from bs4 import BeautifulSoup
 import datetime as dt
 from datetime import timedelta
-import altair as alt
 from PIL import Image
 from wordcloud import WordCloud,STOPWORDS
 
@@ -124,8 +121,6 @@ def day_night_line(data, date):
     df_selected_date2 = df_selected_date2[:].set_index(['date', 'time']).unstack('time')['temp']
     plt.figure(figsize=(10,6))
     plt.subplots_adjust(top = 1, bottom = 0)
-    # plt.plot(df_selected_date2.index,df_selected_date2['Day'],df_selected_date2['Night'])
-    # plt.plot(df_selected_date2)
     df_selected_date2.plot(kind='line')
     plt.xticks(df_selected_date2.index,rotation=45,ha='right')
     plt.ylabel('Temp(°F)')
