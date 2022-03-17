@@ -1,7 +1,5 @@
 from datetime import datetime
 from random import gauss
-import re
-#from winreg import REG_OPTION_CREATE_LINK
 import requests
 import numpy as np
 import pandas as pd
