@@ -38,15 +38,6 @@ def delete_data(name1):
 	c.execute('DELETE FROM t_empoyeetable WHERE Employee_Name="{}"'.format(name1))
 	conn.commit()
 
-# def view_all_email_info():
-# 	c.execute('SELECT DISTINCT Email_Address FROM t_empoyeetable')
-# 	data = c.fetchall()
-# 	return data
-
-# def get_email(email1):
-# 	c.execute('SELECT * FROM t_empoyeetable WHERE Email_Address="{}"'.format(email1))
-# 	data = c.fetchall()
-# 	return data
 
 def view_s_position():
 	c.execute("SELECT * FROM t_empoyeetable WHERE Position='Senior'")
