@@ -3,7 +3,7 @@ from nbformat import write
 import streamlit as st
 import pandas as pd
 import base64
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import requests
 from bs4 import BeautifulSoup
 import datetime as dt
