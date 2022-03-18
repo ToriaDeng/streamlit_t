@@ -19,7 +19,7 @@ st.set_page_config(layout="wide")
 #---------------------------------#
 
 #get picture
-img = Image.open('./weather/sf-.jpg')
+img = Image.open('./weather/SF-.jpg')
 
 st.image(img, width=700)
 
