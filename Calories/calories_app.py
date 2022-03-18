@@ -18,7 +18,7 @@ This app shows the main food's calorie and you can create your own low-calorie r
 #---------------------------------#
 
 # web scrabing 
-@st.cache
+# @st.cache
 def load_data():
     headers = {
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
