@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 import datetime as dt
 from datetime import timedelta
-#from PIL import Image
+from PIL import Image
 from wordcloud import WordCloud,STOPWORDS
 
 #---------------------------------#
