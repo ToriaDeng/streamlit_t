@@ -12,7 +12,7 @@ from calories_appattached import *
 import json
 from streamlit import caching
 
-st.caching.clear_cache()
+caching.clear_cache()
 
 st.set_page_config(layout="wide")
 st.title('Calories Playground App')
