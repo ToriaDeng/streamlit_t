@@ -10,6 +10,7 @@ import requests
 import cv2
 from calories_appattached import * 
 import json
+from streamlit import caching
 
 st.caching.clear_cache()
 
