@@ -14,7 +14,7 @@ import json
 st.set_page_config(layout="wide")
 st.title('Calories Playground App')
 st.markdown("""
-This app shows the main food's caloris and you can create your own low-caloris recipe""")
+This app shows the main food's calorie and you can create your own low-calorie recipe""")
 #---------------------------------#
 
 # web scrabing 
