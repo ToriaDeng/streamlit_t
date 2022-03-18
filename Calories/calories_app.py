@@ -11,6 +11,8 @@ import cv2
 from calories_appattached import * 
 import json
 
+st.caching.clear_cache()
+
 st.set_page_config(layout="wide")
 st.title('Calories Playground App')
 st.markdown("""
