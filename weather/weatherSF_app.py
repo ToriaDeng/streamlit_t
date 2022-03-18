@@ -8,6 +8,9 @@ import datetime as dt
 from datetime import timedelta
 from PIL import Image
 from wordcloud import WordCloud,STOPWORDS
+import warnings
+
+warnings.filterwarnings('ignore')
 
 #---------------------------------#
 # Page layout
@@ -16,7 +19,7 @@ st.set_page_config(layout="wide")
 #---------------------------------#
 
 #get picture
-img = Image.open('./weather/sf.jpg')
+img = Image.open('./weather/sf-.jpg')
 
 st.image(img, width=700)
 
