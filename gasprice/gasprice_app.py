@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 from pyecharts import options as opts
 from pyecharts.charts import Map
 from pyecharts.datasets import register_url
-import matplotlib.pyplot as plt
+import matplotlib as plt
 from wordcloud import WordCloud,STOPWORDS
 
 
