@@ -16,7 +16,7 @@ st.set_page_config(layout="wide")
 #---------------------------------#
 
 #get picture
-img = Image.open('./sf.jpg')
+img = Image.open('./weather/sf.jpg')
 
 st.image(img, width=700)
 
@@ -79,7 +79,7 @@ def load_data():
     date_value = pd.date_range(today, today + timedelta(days =14)).date
     date_dict ={f'{i.day:02}':i for i in date_value}
     df['date'] = df['date'].map(date_dict)
-    
+    df.dropna(subset=['date'], inplace=True)
     return df
 
 df = load_data()
