@@ -14,12 +14,13 @@ from wordcloud import WordCloud,STOPWORDS
 ## Page expands to full width
 st.set_page_config(layout="wide")
 #---------------------------------#
-# Title
 
-# image = Image.open('sf-.jpg')
+#get picture
+img = Image.open('./sf.jpg')
 
-#st.image('./sf-.jpg', width = 700)
+st.image(img, width=700)
 
+#Title
 st.title('San Francisco 15-Day Weather Forecast App')
 st.markdown("""
 Get 15-day wether forecast for **days & nigths** in San Francisco
@@ -34,7 +35,7 @@ expander_bar.markdown("""
 """)
 
 
-
+#layout
 col1 = st.sidebar
 
 col2, col3 = st.columns((2,1))
@@ -119,7 +120,8 @@ def day_night_line(data, date):
     plt.figure(figsize=(10,6))
     plt.subplots_adjust(top = 1, bottom = 0)
     df_selected_date2.plot(kind='line')
-    plt.xticks(df_selected_date2.index,rotation=45,ha='right')
+    xticks_ = df_selected_date2.index.astype(str)
+    plt.xticks(xticks_, rotation=45, ha='right')
     plt.ylabel('Temp(°F)')
     plt.legend(loc='upper right')
     return plt
