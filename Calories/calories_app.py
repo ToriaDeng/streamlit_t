@@ -149,20 +149,19 @@ def main():
         #view recipt table and delete/edit table
         with st.expander("View and Edit Recipe table"):
             st.subheader('view Recipe table')
-            result = view_all_data()
+            result = view_all_data(user_session_id)
             clean_df = pd.DataFrame(result,columns=['Ingredients',' Amount_of_Ingredients','Units','Note'])
             st.dataframe(clean_df)
 
             #delete and update recipt table
             st.subheader('Delete and Upadate ingrredient in table')
-            ingredients_list =[i[0] for i in view_all_ingredients_data()]
+            ingredients_list =[i[0] for i in view_all_ingredients_data(user_session_id)]
             delete_ingredients=st.selectbox('Select ingredent to delete',ingredients_list)
             if st.button("Delete selected ingredient"):
                 delete_data(delete_ingredients)
                 st.warning("Deleted: '{}'".format(delete_ingredients))
             if st.button('Update Recipe table'):
-                 result = view_all_data()
-
+                 result = view_all_data(user_session_id)
 
                         
         #gererate qr code for recipe
