@@ -7,8 +7,8 @@ def create_table():
 	c.execute('CREATE TABLE IF NOT EXISTS t_caloriss(Session_ID TEXT,Ingredients TEXT, Amount_of_Ingredients TEXT , Units TEXT,Note TEXT)')
 
 
-def add_data(ingredient,amount,units,note):
-	c.execute('INSERT INTO t_caloriss(Session_ID,Ingredients, Amount_of_Ingredients, Units, Note) VALUES (?,?,?,?,?)',(session_IDingredient,amount,units,note))
+def add_data(session_id,ingredient,amount,units,note):
+	c.execute('INSERT INTO t_caloriss(Session_ID,Ingredients, Amount_of_Ingredients, Units, Note) VALUES (?,?,?,?,?)',(session_id,ingredient,amount,units,note))
 	conn.commit()
 
 
