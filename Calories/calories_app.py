@@ -16,7 +16,18 @@ st.set_page_config(layout="wide")
 st.title('Calories Playground App')
 st.markdown("""
 This app shows the main food's calorie and you can create your own low-calorie recipe""")
+This app shows the main food's calorie and you can create your own low-calorie recipe""")
 #---------------------------------#
+
+#
+def get_session_id():
+    ctx = get_script_run_ctx()
+    if ctx is None:
+        raise Exception("Failed to get the thread context")
+
+    return ctx.session_id
+
+user_session_id = get_session_id()
 
 # web scrabing 
 @st.cache
