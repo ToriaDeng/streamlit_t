@@ -143,7 +143,7 @@ def main():
         note=st.text_area('Note')
         #add item in the table
         if st.button("Add Ingredient"):
-            add_data(ingredient,amount,units,note)
+            add_data(user_session_id, ingredient, amount, units, note)
             st.success("Added ::{} ::To List".format(ingredient))
 
         #view recipt table and delete/edit table
