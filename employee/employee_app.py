@@ -26,7 +26,7 @@ if choice == "Add Employee Info":
 		Email = st.text_input('Email Address')
 
 	with col2:
-		Position = st.selectbox("Position Level",["Senior","Midedle","Junior"])
+		Position = st.selectbox("Position Level",["Senior","Middle","Junior"])
 		Entry_date = st.date_input("Date of Entry")
 
 	if st.button("Add Employee"):
@@ -107,7 +107,7 @@ elif choice == "Delete Info" :
 
 
 elif choice == "Send Email":
-		st.subheader('Email Sender Web App')
+		st.subheader('Email Sender')
 		email_sender= st.text_input('Enter User Email:')
 		password=st.text_input ('Enter User Password : ', type='password')
 		group=['Send to Employee','Send by Job Title']
@@ -134,8 +134,7 @@ elif choice == "Send Email":
 					st.write(email_reciever_list)
 					email_reciever =(email_reciever_list)
 
-				else: 
-					title_send=='Junior'
+				elif title_send=='Junior':
 					email_reciever_list = [i[2] for i in view_j_position()]
 					st.write(email_reciever_list)
 					email_reciever =(email_reciever_list)
