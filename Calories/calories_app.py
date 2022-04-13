@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit.script_run_context import get_script_run_ctx
+from streamlit.scriptrunner import get_script_run_ctx
 import pandas as pd
 import matplotlib.pyplot as plt
 import qrcode
